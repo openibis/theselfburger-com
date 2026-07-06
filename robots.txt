@@ -1,0 +1,7 @@
+# SELF. · theselfburger.com · robots.txt
+# Allow all crawlers · point to sitemap
+User-agent: *
+Allow: /
+Disallow: /partners/private/
+
+Sitemap: https://theselfburger.com/sitemap.xml

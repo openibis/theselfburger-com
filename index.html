@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SELF. · Which one are you tonight?</title>
+  <meta name="description" content="SELF. is a brand that publishes work. Its first published work is Self Burger and Self Slice — 7 psychological archetypes mapped to zodiac, MBTI, and anime archetypes. Take the 30-second quiz and order your archetype on Uber Eats." />
+
+  <!-- OpenGraph + Twitter Card -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SELF. · Which one are you tonight?" />
+  <meta property="og:description" content="7 archetypes · mapped to zodiac, MBTI, and anime. Pick a piece of yourself. Eat it in public. Delivered by Uber Eats." />
+  <meta property="og:url" content="https://theselfburger.com" />
+  <meta property="og:image" content="https://theselfburger.com/og-hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preconnect for the ecosystems we send users to -->
+  <link rel="preconnect" href="https://www.ubereats.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-mark">
+      <span class="mark">SELF<span class="dot">.</span></span>
+    </div>
+    <h1 class="hero-question">Which one are you tonight?</h1>
+    <button id="start-quiz" class="cta cta-primary">Find out</button>
+    <p class="hero-fine">A SELF. Volume One production · 7 archetypes · mapped to zodiac / MBTI / anime · delivered by Uber Eats</p>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="quiz hidden">
+    <div class="quiz-question" data-q="1">
+      <p class="quiz-prompt">What did you eat last?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-answer="q1_whole_life">Something I've been eating my whole life</button>
+        <button class="quiz-option" data-answer="q1_something_new">Something new</button>
+        <button class="quiz-option" data-answer="q1_photographed">Something impressive I photographed</button>
+        <button class="quiz-option" data-answer="q1_dont_remember">I don't remember</button>
+      </div>
+    </div>
+    <div class="quiz-question hidden" data-q="2">
+      <p class="quiz-prompt">How do you feel right now?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-answer="q2_sharp">Sharp</button>
+        <button class="quiz-option" data-answer="q2_soft">Soft</button>
+        <button class="quiz-option" data-answer="q2_restless">Restless</button>
+        <button class="quiz-option" data-answer="q2_in_between">In-between</button>
+      </div>
+    </div>
+    <div class="quiz-question hidden" data-q="3">
+      <p class="quiz-prompt">Who's watching?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-answer="q3_everyone">Everyone</button>
+        <button class="quiz-option" data-answer="q3_just_me">Just me</button>
+        <button class="quiz-option" data-answer="q3_one_person">One person</button>
+        <button class="quiz-option" data-answer="q3_dont_care">I don't care</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULT · dual-face with fandom overlay -->
+  <section id="result" class="result hidden">
+    <div class="result-scannable">
+      <p class="case-number" id="result-case">#C-00001</p>
+      <h2 class="archetype-name" id="result-archetype">The Ego</h2>
+      <p class="archetype-subtitle" id="result-subtitle">"I built me."</p>
+      <p class="fandom-emoji" id="fandom-emoji">👑🔥</p>
+
+      <!-- Fandom overlay grid — the kid+teen-native viral device -->
+      <div class="fandom-overlays">
+        <div class="fandom-card">
+          <span class="fandom-label">Element</span>
+          <span class="fandom-value" id="fandom-element">The Flame</span>
+          <span class="fandom-vibe" id="fandom-element-vibe">Fire · passion · main-character energy</span>
+        </div>
+        <div class="fandom-card">
+          <span class="fandom-label">Zodiac vibe</span>
+          <span class="fandom-value" id="fandom-zodiac">Leo · Aries</span>
+        </div>
+        <div class="fandom-card">
+          <span class="fandom-label">MBTI type</span>
+          <span class="fandom-value" id="fandom-mbti">ENTJ · The Commander</span>
+        </div>
+        <div class="fandom-card">
+          <span class="fandom-label">Anime archetype</span>
+          <span class="fandom-value" id="fandom-anime">Genki (energetic protagonist)</span>
+        </div>
+        <div class="fandom-card">
+          <span class="fandom-label">RPG class</span>
+          <span class="fandom-value" id="fandom-rpg">Paladin</span>
+        </div>
+        <div class="fandom-card fandom-card-highlight">
+          <span class="fandom-label">In one word</span>
+          <span class="fandom-value" id="fandom-kid-descriptor">Main character energy</span>
+        </div>
+      </div>
+
+      <div class="result-ctas">
+        <a href="#" class="cta cta-primary" id="result-order" target="_blank" rel="noopener">Order on Uber Eats</a>
+        <button class="cta cta-share" id="result-share" style="display:none">Share your archetype</button>
+        <button class="cta cta-secondary" id="result-restart">Not tonight</button>
+      </div>
+    </div>
+    <div class="result-deep">
+      <p class="result-reading" id="result-reading"></p>
+      <p class="result-byline">— V. Monart · Guest Analyst · Volume One</p>
+      <div class="result-runners" id="result-runners"></div>
+      <p class="result-legal">For reflection. Not a substitute for professional care.</p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu">
+    <h2 class="menu-title">Volume One · Menu</h2>
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-brand="burger">Self Burger</button>
+      <button class="menu-tab" data-brand="slice">Self Slice</button>
+    </div>
+    <div class="menu-grid" id="menu-grid"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2 class="about-title">About SELF.</h2>
+    <p class="about-body">SELF. is a brand that publishes work.</p>
+    <p class="about-body">
+      Its first published work is Self Burger and Self Slice — a virtual restaurant, delivered by Uber Eats out of partner kitchens across the United States. Every SKU is a psychological archetype mapped to your fandoms: zodiac, MBTI, anime archetypes, and D&D-style classes. Each order arrives with a small card, a case number, and a 100-word reading by our fictional Guest Analyst, Dr. Vera Monart.
+    </p>
+    <p class="about-body">
+      What stays constant is one gesture: <em>the customer picks a piece of themselves off a menu and eats it in public.</em>
+    </p>
+    <p class="about-body">
+      SELF. is a subsidiary of SELF Holdings LLC · Cheyenne, Wyoming *(formation pending)*.
+    </p>
+    <p class="about-fine">Guest analysts are fictional characters written for SELF. Nothing on this site is professional advice.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="footer-tagline">A SELF. Volume One production. For reflection. Not a substitute for professional care.</p>
+    <p class="footer-legal">© 2026 SELF Holdings LLC · SELF., Self Burger, and Self Slice are trademarks of SELF Holdings LLC (formation pending; USPTO applications forthcoming). · Not a medical device.</p>
+  </footer>
+
+  <!-- JSON-LD structured data · Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SELF.",
+    "legalName": "SELF Holdings LLC",
+    "url": "https://theselfburger.com",
+    "logo": "https://theselfburger.com/logo/self-primary-mark.svg",
+    "sameAs": ["https://instagram.com/selfburger", "https://tiktok.com/@selfburger"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cheyenne",
+      "addressRegion": "WY",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD structured data · Quiz -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "SELF. Archetype Mood-Quiz",
+    "description": "Find your food archetype in 30 seconds. Discover whether you are The Ego, The Shadow, The Inner Child, The Mother, The Rebel, The Impostor, or The Perfectionist. Also mapped to zodiac, MBTI, anime archetypes, and D&D-style classes.",
+    "url": "https://theselfburger.com/quiz",
+    "author": { "@type": "Person", "name": "Dr. Vera Monart", "description": "Fictional Guest Analyst for SELF." },
+    "publisher": { "@type": "Organization", "name": "SELF Holdings LLC" }
+  }
+  </script>
+
+  <!-- JSON-LD structured data · FAQPage · Google rich snippet -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a food archetype?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SELF. maps 7 psychological archetypes (The Ego, The Shadow, The Inner Child, The Mother, The Rebel, The Impostor, The Perfectionist) to burgers and slices. Take the quiz to find yours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which archetype am I?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Take the 30-second Mood-Quiz at theselfburger.com/quiz to find out. You'll also see which zodiac sign, MBTI type, anime archetype, and RPG class your archetype maps to."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I order SELF. Burger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Take the quiz. Click 'Order on Uber Eats' — the recommended burger will be pre-selected in your Uber Eats cart."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is SELF. Burger available in my city?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SELF. launches in NYC first (Volume One). Follow @selfburger on Instagram and TikTok for expansion updates. Enter your zip on our site to be notified when we come to your area."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
