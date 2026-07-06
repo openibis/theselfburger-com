@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Self Slice · Wordmark · v1.0 · 2026-07-06
+  Same structure as Self Burger with "Slice" substituted.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-labelledby="title">
+  <title id="title">Self Slice</title>
+  <rect width="800" height="400" fill="#F8F5F0"/>
+  <text x="400" y="210"
+        font-family="'Domaine Display', 'GT Sectra', 'Editorial New', serif"
+        font-size="150"
+        font-weight="500"
+        letter-spacing="-3"
+        text-anchor="middle"
+        fill="#1C1A17">SELF<tspan font-size="170" dx="-2" dy="0">.</tspan></text>
+  <text x="400" y="310"
+        font-family="'Domaine Display Italic', 'GT Sectra Italic', 'EB Garamond Italic', serif"
+        font-style="italic"
+        font-size="72"
+        font-weight="400"
+        letter-spacing="6"
+        text-anchor="middle"
+        fill="#2C2926">Slice</text>
+</svg>

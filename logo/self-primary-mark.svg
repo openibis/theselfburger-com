@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SELF. · Primary Mark · v1.0 · 2026-07-06
+  Typographic wordmark · Domaine Display serif fallback · oversized period as signature dot.
+  Bone-white background (#F8F5F0) · deep-charcoal type (#1C1A17).
+  Aesop × NYT Magazine × Le Labo aesthetic.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240" role="img" aria-labelledby="title">
+  <title id="title">SELF.</title>
+  <rect width="800" height="240" fill="#F8F5F0"/>
+  <text x="400" y="170"
+        font-family="'Domaine Display', 'GT Sectra', 'Editorial New', 'EB Garamond', 'Times New Roman', serif"
+        font-size="180"
+        font-weight="500"
+        letter-spacing="-4"
+        text-anchor="middle"
+        fill="#1C1A17">SELF<tspan font-size="200" dx="-2" dy="0">.</tspan></text>
+</svg>

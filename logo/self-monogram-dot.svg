@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SELF. · Monogram · just the dot · v1.0 · 2026-07-06
+  Favicon + social avatar. The minimum-viable brand mark.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title">
+  <title id="title">SELF. monogram</title>
+  <rect width="512" height="512" fill="#F8F5F0"/>
+  <circle cx="256" cy="256" r="128" fill="#1C1A17"/>
+</svg>

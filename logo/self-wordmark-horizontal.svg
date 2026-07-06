@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SELF. · Extended horizontal wordmark · v1.0 · 2026-07-06
+  For site headers, footers, wide banners. Extra letter-spacing.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 200" width="1600" height="200" role="img" aria-labelledby="title">
+  <title id="title">SELF. — Volume One</title>
+  <rect width="1600" height="200" fill="#F8F5F0"/>
+  <text x="800" y="130"
+        font-family="'Domaine Display', 'GT Sectra', 'Editorial New', serif"
+        font-size="120"
+        font-weight="500"
+        letter-spacing="24"
+        text-anchor="middle"
+        fill="#1C1A17">S E L F<tspan font-size="140" dx="12" dy="0">.</tspan></text>
+</svg>
